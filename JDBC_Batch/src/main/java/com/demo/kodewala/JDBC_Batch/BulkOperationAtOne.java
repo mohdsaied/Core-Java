@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class App {
+public class BulkOperationAtOne {
   public static void main(String[] args) throws ClassNotFoundException, SQLException {
 	  
 	  
@@ -24,8 +24,9 @@ public class App {
 		
 		String inserSql= "insert into userinfo(username, password, hint_question, hint_answer) value(?,?,?,?)";
 		
-		PreparedStatement prepareStatement = con.prepareStatement(inserSql);
+		PreparedStatement prepareStatement = con.prepareStatement(inserSql);// Call Once 
 		
+		//Perform Bulk Operation at a time (Perform Many Record) Here we can perform file Or CSV file
 		for(int i=0; i<10; i++) {
 			prepareStatement.setString(1, "Mo Saied-"+i);
 			prepareStatement.setString(2, "mosaied@123-"+i);
@@ -34,7 +35,7 @@ public class App {
 			prepareStatement.addBatch();
 		}
 		
-		int[] batch = prepareStatement.executeBatch();
+		int[] batch = prepareStatement.executeBatch();// Execute Batch After the making Batchs
 		System.out.println(batch);
   }
 }
