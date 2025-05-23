@@ -44,9 +44,9 @@ public class Employee {
 		if(this == obj) return true;
 		if(obj == null || getClass() != obj.getClass()) return false;
 		
-		Employee employee = (Employee)obj;
+		Employee employee = (Employee) obj;
 		
-		return id == employee.id &&
+		return id == employee.id && 
 				Objects.equals(name, employee.name) &&
 				Objects.equals(salary, employee.salary);
 	}
@@ -58,24 +58,11 @@ public class Employee {
 		Employee e2 = new Employee(101, "mosaied", 60000);
 		Employee e3 = new Employee(102, "Majid", 70000);
 		
-		boolean equals = e1.equals(e2);
+		boolean equals = e1.equals(null);
 		System.out.println(equals);
 		
 		boolean equals2 = e2.equals(e3);
 		System.out.println(equals2);
-		
-		/*
-		
-		
-Q1)Write a Java Program to count the number of words in a string using HashMap in Java8 streams.
-Input : "This this is is done by Mahesh Mahesh"
-Output : Mahesh=2, by=1, this=1, This=1, is=2, done=1
-
-String sentence = "This this is is done by Mahesh Mahesh";
-
-Arrays.stream(sentence.trim().split(" ")).collect(Collectors.grupingBy(n->n, Collectors.counting()));
-		
-		 */
 		
 	}
 }

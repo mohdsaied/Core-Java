@@ -19,7 +19,6 @@ public class ArrayListDemo {
 		
 		String removeProject = product.remove(0);// Here i am removing particular index product
 		System.out.println("Removed Product is : "+ removeProject);
-		
 		System.out.println("Total Product is remaining is :"+ product.size());// Getting size of the product
 		
 	}
