@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id = "myEmpObj" class="com.demo.Employee">
+    
+    <property name="firstName" value="Mo"/>
+    <property name="lastName" value="Saied"/>
+    <property name="email" value="mo@saied.com"/>
+    </bean>
+    
+    <bean id ="myAddObj" class="com.demo.Address">
+    
+    <property name="localAddres" value ="City Bareilly Uttar Pradesh"/>
+    <property name="permanetAddress" value ="Shahi Meerganj Bareilly UP"/>
+    <property name="pincode" value ="2435006"/>
+    
+    </bean>
+
+    
+
+</beans>
