@@ -14,7 +14,7 @@ public class App {
 	  
 	  Employee employee = (Employee) context.getBean("employee");
 	  
-	  employee.doSomething();
+	  employee.doSomething(); 
 	  
   }
 }
